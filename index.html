@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scan Master - Engine Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/shim.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Scan Master - Engine Tracker</h1>
+    </header>
+    
+    <main>
+      <!-- Engine Selector -->
+      <section class="engine-selector">
+        <button id="engine1-btn" class="engine-btn">Engine 1</button>
+        <button id="engine2-btn" class="engine-btn">Engine 2</button>
+      </section>
+
+      <!-- Checklist Section -->
+      <section id="checklist-section" class="hidden">
+        <h2 class="status-title">Assembly Status: <span id="status-text">Not Started</span></h2>
+        <ul id="checklist"></ul>
+        <div class="progress-bar">
+          <div id="progress-bar-fill"></div>
+        </div>
+        <button id="save-btn" class="save-btn">Save Assembly</button>
+      </section>
+
+      <!-- Assembly History -->
+      <section id="history-section">
+        <h2>Assembly History</h2>
+        <table id="history-table">
+          <thead>
+            <tr>
+              <th>Serial</th>
+              <th>Engine Type</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="export-btn">Export to Excel</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
